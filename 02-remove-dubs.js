@@ -89,11 +89,9 @@ function removeDubs(dataList) {
     index2 = 0,
     arraySize = dataList.length;
   while (index < arraySize) {
-    // console.log(`[1] dataList[${index}] -- `, dataList[index]);
     // NOTE: when use 'wlile' loop, we should drop internal index on each iteration of the closest external loop
     index2 = 0;
     while (index2 < arraySize) {
-      // console.log(`[2] dataList[${index2}] -- `, dataList[index2]);
       if (dataList[index] === dataList[index2] && index !== index2) {
         dataList.splice(index2, 1);
         --index2;
@@ -102,7 +100,6 @@ function removeDubs(dataList) {
       ++index2;
     }
     ++index;
-    // console.log('\n---------------\n');
   }
 
   return dataList;
